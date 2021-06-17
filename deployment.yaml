@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+    name: myexpressapp
+    labels: 
+        app: expressapp
+spec: 
+  replicas: 1
+  selectors:
+      matchLabels: 
+            app: expressapp
+  template: 
+      metadata: 
+           labels: 
+               app: expressapp
+      spec: 
+        containers: 
+             - name: expressapp
+               image: rtxverma123/expresscalculator
+               ports: 
+                 - containerPort: 3000 
