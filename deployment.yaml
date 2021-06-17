@@ -6,7 +6,7 @@ metadata:
         app: expressapp
 spec: 
   replicas: 1
-  selectors:
+  selector:
       matchLabels: 
             app: expressapp
   template: 
